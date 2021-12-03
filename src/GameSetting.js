@@ -87,7 +87,6 @@ function GameSetting(props) {
       alert(`Please enter your user name!`);
     } else {
       setUserNameAlready(true);
-      console.log(userName);
     }
   };
 
@@ -114,8 +113,6 @@ function GameSetting(props) {
           setExistingUser(true);
           if (continueGame) {
             // Pass existing data to GameDisplay.js
-            console.log(data);
-            console.log(data[userName]);
             setUserQuestions(data[userName].questions);
             setUserCorrectNumber(data[userName].correctNumber);
             setUserAnsweredNumber(data[userName].answeredNumber);
@@ -160,10 +157,6 @@ function GameSetting(props) {
           setUserQuestions(questionsAndAnswersFromApi);
         }
       });
-      console.log(questionsAndAnswersFromApi);
-      console.log(userTypeChoice);
-      console.log(userDifficultyChoice);
-      console.log(userCategoryChoice);
     }
   }, [
     userNumberChoice,
